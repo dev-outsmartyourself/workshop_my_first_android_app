@@ -12,7 +12,7 @@ import com.outsmart.starwarsfilms.R;
 
 import io.reactivex.Observer;
 
-public class FilmsList extends Activity {
+public class FilmsListActivity extends Activity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;

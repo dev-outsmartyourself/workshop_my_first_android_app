@@ -15,6 +15,7 @@ public class FilmMockDataSource {
     private static List<FilmModel> films = new ArrayList<FilmModel>();
 
     public static FilmMockDataSource getInstance() {
+        films.clear();
         films.add(new FilmModel(
                 "The Phantom Menace",
                 "https://firebasestorage.googleapis.com/v0/b/workshop-senec-my-first-app.appspot.com/o/episode_1.jpg?alt=media&token=a3ad1c1c-6266-4e0c-971f-706a84c07f9f",
