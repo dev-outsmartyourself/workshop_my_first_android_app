@@ -13,7 +13,7 @@ import com.outsmart.starwarsfilms.Utils.DownloadImageTask;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilmsListActivity extends Activity  {
+public class FilmsActivity extends Activity  {
 
     private MockDataSource dataSource = MockDataSource.getInstance();
     private List<FilmModel> films = new ArrayList<>();
