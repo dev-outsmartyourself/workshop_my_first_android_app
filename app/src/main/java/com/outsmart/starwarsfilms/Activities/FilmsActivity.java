@@ -2,13 +2,13 @@ package com.outsmart.starwarsfilms.Activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
+import com.outsmart.starwarsfilms.Adapters.FilmsAdapter;
 import com.outsmart.starwarsfilms.DataSources.MockDataSource;
 import com.outsmart.starwarsfilms.Models.FilmModel;
 import com.outsmart.starwarsfilms.R;
-import com.outsmart.starwarsfilms.Utils.DownloadImageTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,23 +21,15 @@ public class FilmsActivity extends Activity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.film_card);
+        setContentView(R.layout.films_list);
 
-        this.films = dataSource.getAllFilms();
-        FilmModel film = this.films.get(0);
+        films = dataSource.getAllFilms();
 
-        TextView title = (TextView) findViewById(R.id.episode_title);
-        ImageView image = (ImageView) findViewById(R.id.episode_image);
-        TextView year = (TextView) findViewById(R.id.episode_year);
-        TextView episodeNumber = (TextView) findViewById(R.id.episode_number);
-        TextView imdbRate = (TextView) findViewById(R.id.episode_imdb);
+        RecyclerView recycler = (RecyclerView) findViewById(R.id.films_recycler);
 
-        DownloadImageTask task = new DownloadImageTask(image);
-        task.execute(film.getImage());
-        title.setText(film.getTitle());
-        year.setText(String.valueOf(film.getEpisodeYear()));
-        episodeNumber.setText("Episode " + film.getEpisodeNumber());
-        imdbRate.setText(film.getImdbRate() + "/10");
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recycler.setLayoutManager(layoutManager);
+        FilmsAdapter adapter = new FilmsAdapter(films);
+        recycler.setAdapter(adapter);
     }
-
 }
