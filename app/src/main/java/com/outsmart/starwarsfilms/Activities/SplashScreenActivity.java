@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.outsmart.starwarsfilms.R;
 
-public class SplashScreen extends Activity {
+public class SplashScreenActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
