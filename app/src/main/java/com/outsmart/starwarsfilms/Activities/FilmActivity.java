@@ -2,8 +2,6 @@ package com.outsmart.starwarsfilms.Activities;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.outsmart.starwarsfilms.R;
 
@@ -14,11 +12,7 @@ public class FilmActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.film_card);
 
-        TextView title = (TextView) findViewById(R.id.episode_title);
-        ImageView image = (ImageView) findViewById(R.id.episode_image);
-
-        title.setText("The Phantom Menace");
-        image.setImageResource(R.drawable.episode_1);
+        //TODO: fazer binds e setar os valores do titulo e da imagem
     }
 
 }
