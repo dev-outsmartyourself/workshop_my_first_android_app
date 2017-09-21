@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "628857410158",
+    "firebase_url": "https://workshopfirstappsenec.firebaseio.com",
+    "project_id": "workshopfirstappsenec",
+    "storage_bucket": "workshopfirstappsenec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628857410158:android:a92cb7d6b4c8a9a0",
+        "android_client_info": {
+          "package_name": "com.outsmart.starwarsfilms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628857410158-r2bv1eo4frq5mgh6ju5oh3u3n7t60ivq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4nQIbhsuY7dyqKD3-vn6BMLEU33jU6Ag"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

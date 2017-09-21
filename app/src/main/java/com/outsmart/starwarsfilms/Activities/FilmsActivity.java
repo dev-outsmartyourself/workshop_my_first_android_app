@@ -6,16 +6,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.outsmart.starwarsfilms.Adapters.FilmsAdapter;
-import com.outsmart.starwarsfilms.DataSources.MockDataSource;
+import com.outsmart.starwarsfilms.DataSources.FirebaseDataSource;
 import com.outsmart.starwarsfilms.Models.FilmModel;
 import com.outsmart.starwarsfilms.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilmsActivity extends Activity  {
+public class FilmsActivity extends Activity implements FirebaseDataSource.GetAllFilmsListener {
 
-    private MockDataSource dataSource = MockDataSource.getInstance();
+    private FirebaseDataSource dataSource = FirebaseDataSource.getInstance();
+    private FilmsAdapter adapter;
     private List<FilmModel> films = new ArrayList<>();
 
     @Override
@@ -23,13 +24,20 @@ public class FilmsActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.films_list);
 
-        films = dataSource.getAllFilms();
+        dataSource.getAllFilms(this, films);
 
         RecyclerView recycler = (RecyclerView) findViewById(R.id.films_recycler);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
-        FilmsAdapter adapter = new FilmsAdapter(films);
+        adapter = new FilmsAdapter(films);
         recycler.setAdapter(adapter);
+
+
+    }
+
+    @Override
+    public void onDataRetrieved() {
+        adapter.notifyDataSetChanged();
     }
 }
