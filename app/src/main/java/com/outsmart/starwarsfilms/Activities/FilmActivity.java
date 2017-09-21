@@ -16,9 +16,15 @@ public class FilmActivity extends Activity  {
 
         TextView title = (TextView) findViewById(R.id.episode_title);
         ImageView image = (ImageView) findViewById(R.id.episode_image);
+        TextView year = (TextView) findViewById(R.id.episode_year);
+        TextView episodeNumber = (TextView) findViewById(R.id.episode_number);
+        TextView imdbRate = (TextView) findViewById(R.id.episode_imdb);
 
         title.setText("The Phantom Menace");
         image.setImageResource(R.drawable.episode_1);
+        year.setText("1999");
+        episodeNumber.setText("Episode 1");
+        imdbRate.setText("6.5/10");
     }
 
 }
