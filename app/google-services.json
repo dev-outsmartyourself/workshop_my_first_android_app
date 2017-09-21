@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "324390219009",
+    "firebase_url": "https://myfirstandroidapp-5d768.firebaseio.com",
+    "project_id": "myfirstandroidapp-5d768",
+    "storage_bucket": "myfirstandroidapp-5d768.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324390219009:android:a92cb7d6b4c8a9a0",
+        "android_client_info": {
+          "package_name": "com.outsmart.starwarsfilms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324390219009-eb8fo5485nsig28g53t0ks33pps23l2m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7h3ff7uDohzQxu6lcwWRdFt1qaiC35ZM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

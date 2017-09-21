@@ -13,7 +13,8 @@ public class FilmModel {
     private int episodeYear;
     private double imdbRate;
 
-    public FilmModel(String title, String image, int episodeNumber, int episodeYear, double imdbRate) {
+    public FilmModel(String id, String title, String image, int episodeNumber, int episodeYear, double imdbRate) {
+        this.id = id;
         this.title = title;
         this.image = image;
         this.episodeNumber = episodeNumber;
